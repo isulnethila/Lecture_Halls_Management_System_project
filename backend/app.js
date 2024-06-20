@@ -9,21 +9,19 @@ const timeSlotRoutes = require('./routes/timeSlotRoutes');
 const app = express();
 const port = 5000;
 
-// Connect to the database
-connectDB().then(() => {
-  // Middleware setup
+
+connectDB()
+
   app.use(bodyParser.json());
   app.use(cors());
 
-  // Route setup
+ 
   app.use('/halls', hallRoutes);
   app.use('/courses', courseRoutes);
   app.use('/timeslots', timeSlotRoutes);
 
-  // Start the server
+ 
   app.listen(port, () => {
     console.log("The API is running on port", port);
   });
-}).catch(error => {
-  console.error("Failed to start the server:", error);
-});
+
