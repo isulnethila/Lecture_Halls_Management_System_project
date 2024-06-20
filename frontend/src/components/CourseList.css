@@ -1,0 +1,54 @@
+.course-list {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.course-list h1 {
+    color: #333;
+}
+
+.course-list input, .course-list button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.course-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-list li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333; 
+  margin-bottom: 20px; 
+  background-color: rgb(189, 189, 189);
+  text-align: center;
+}
+
+/* CourseList.css */
+
+.button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove border */
+    color: rgb(164, 43, 43); /* White text */
+    padding: 10px 20px; /* Padding around text */
+    text-align: center; /* Center-align text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin around button */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+  }
+  

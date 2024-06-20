@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getHalls, addHall } from '../services/hallService';
+import './HallList.css';
 
 const HallList = () => {
     const [halls, setHalls] = useState([]);

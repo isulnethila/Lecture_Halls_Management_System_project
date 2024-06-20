@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getTimeSlots, addTimeSlot } from '../services/timeSlotService';
+import './TimeSlotList.css';
 
 const TimeSlotList = () => {
     const [timeSlots, setTimeSlots] = useState([]);
