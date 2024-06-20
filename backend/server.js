@@ -1,16 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose=require('mongoose');
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect('mongodb+srv://isulnethila2020:s3dAgkCZpBifjuGT@assigment1.raanrvi.mongodb.net/lecture-halls?retryWrites=true&w=majority&appName=assigment1', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log("DB connected");
-  } catch (error) {
-    console.error("Failed to connect to MongoDB:", error);
-    process.exit(1); // Exit the process with failure
-  }
-};
+const connectDB=async ()=>{
+    try{
+    await mongoose.connect('mongodb+srv://project:09UZ4nt0PYVo5gPJ@cluster0.n0kig6o.mongodb.net/Lecture_Halls_Management_System');
+    console.log("DB connected")
+    }
+    catch(error){
+        console.error("Failed to cennect to Mondodb:",error);
+    }
 
-module.exports = connectDB;
+}
+
+module.exports=connectDB
