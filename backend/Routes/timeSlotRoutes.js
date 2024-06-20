@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const TimeSlot = require('../models/TimeSlot');
+const TimeSlot = require('../models/timeSlot');
 
 router.post('/add', async (req, res) => {
     const timeSlot = new TimeSlot(req.body);
