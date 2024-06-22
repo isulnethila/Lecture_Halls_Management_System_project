@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getCourses, addCourse } from '../services/courseService';
+import { getCourses, addCourse, deleteCourse } from '../services/courseService';
 import { getHalls } from '../services/hallService';
 import { getTimeSlots } from '../services/timeSlotService';
 import './CourseList.css';
@@ -37,6 +37,11 @@ const CourseList = () => {
         setNewCourse({ name: '', hallId: '', timeSlotId: '' }); // Reset form fields after adding course
     };
 
+    const handleDeleteCourse = async (id) => {
+        await deleteCourse(id);
+        loadCourses();
+    };
+
     return (
         <div className="container">
             <h1>Courses</h1>
@@ -64,6 +69,7 @@ const CourseList = () => {
                 {courses.map(course => (
                     <li key={course._id}>
                         {course.name} - Hall: {halls.find(hall => hall._id === course.hallId)?.name || 'Not Assigned'} - Time Slot: {timeSlots.find(slot => slot._id === course.timeSlotId) ? `${new Date(timeSlots.find(slot => slot._id === course.timeSlotId).startTime).toLocaleString()} - ${new Date(timeSlots.find(slot => slot._id === course.timeSlotId).endTime).toLocaleString()}` : 'Not Assigned'}
+                        <button onClick={() => handleDeleteCourse(course._id)}>Delete</button>
                     </li>
                 ))}
             </ul>
